@@ -1,0 +1,29 @@
+﻿<div class="container">
+    <h1>User Form : {{user.firstName}} {{user.lastName}}</h1>
+    <form>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" required
+                   [(ngModel)]="user.firstName">
+
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" required
+                   [(ngModel)]="user.lastName">
+        </div>
+        <div class="form-group">
+            <label for="isActive">Active User</label>
+            <input type="checkbox" class="form-control"
+                   [(ngModel)]="user.isActive">
+        </div>
+        <div class="form-group">
+            <label for="sex">Sex</label>
+            <select class="form-control" [(ngModel)]="user.sex">
+                <option *ngFor="#value of sexList" [value]="value">{{value}}</option>
+            </select>
+        </div>
+        <button type="submit" (click)="onSubmit(user)" class="btn btn-default">Submit</button>
+    </form>
+</div>
+{{diagnostic}}

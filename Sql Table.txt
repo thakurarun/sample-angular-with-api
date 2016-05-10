@@ -1,0 +1,9 @@
+CREATE TABLE [dbo].[UserModel] (
+    [id]        INT           IDENTITY (1, 1) NOT NULL,
+    [firstName] NVARCHAR (50) NULL,
+    [lastName]  NVARCHAR (50) NULL,
+    [isActive]  BIT           NULL,
+    [sex]       NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
+

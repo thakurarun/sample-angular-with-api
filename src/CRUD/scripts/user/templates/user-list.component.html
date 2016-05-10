@@ -1,0 +1,14 @@
+﻿<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">User List</h3>
+        </div>
+        <ul class="nav nav-pills nav-stacked">
+            <li *ngFor="#user of users"
+                role="presentation"
+                [class.active]="selected == user">
+                <a (click)="onSelectionChange(user)">{{user.firstName}} {{user.lastName}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
